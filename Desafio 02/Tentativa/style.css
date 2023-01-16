@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    background-color: #D9CDF7;
+}
+.tudo {
+    display: grid;
+    grid-template-areas: 'A B';
+    grid-template-columns: max-content max-content;
+    gap: 12px;
+    place-items: center;
+    height: 100vh;
+}
+.img{
+    display: grid;
+    grid-template-areas: 'A B';
+    grid-template-columns: max-content max-content;
+}
+.icon svg {
+    width: 5vw;
+    margin-inline: -7vw;
+    margin-right: 30px;
+}
+.img img{
+    grid-area: A;
+    width: 50vw;
+}
+.dir {
+    grid-area: B;
+    font-family: 'Lato', sans-serif;
+    color: #271A45
+}
+.cod {
+    font-weight: 300;
+    font-size: 1.4vw;
+}
+.nome {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2.4vw;
+    margin: 1.5vw 0;
+}
+.preco {
+    font-weight: 400;
+    font-size: 2.5vw;
+    margin-bottom: 2.4vw;
+    opacity: 0.67;
+}
+.botao {
+    font-size: 1.9vw;
+    border: #271A45 solid 1px;
+    padding: 1.5vw 3vw;
+    width: fit-content;
+    border-radius: 100px;
+}
+.botao:hover{
+    background-color: #271A45;
+    color: #D9CDF7;
+}
+@media (max-width: 760px) {
+    .tudo {
+        display: block;
+        height: fit-content;
+    }
+    .icon svg {
+        width: 9vw;
+        margin-inline: -10vw;
+        margin-top: 7vw;
+    }
+    .img img{
+        width: 90vw;
+    }
+    img {
+        margin: 30px auto;
+        display: block;
+    }
+    .dir {
+        display: grid;
+        place-items: center;
+    }
+    .cod {
+        font-size: 2.2vw;
+    }
+    .nome {
+        font-size: 3.2vw;
+        margin: 10px 0;
+    }
+    .preco {
+        margin-top: 4px;
+        margin-bottom: 20px;
+        font-size: 3.5vw;
+    }
+    .botao {
+        font-size: 2.7vw;
+        padding: 2vw 4vw;
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 1280px) {
+    .cod {
+        font-size: 18px;
+    }
+    .nome {
+        font-size: 31px;
+        margin: 18px 0;
+    }
+    .preco {
+        margin-top: 4px;
+        font-size: 33px;
+    }
+    .botao {
+        font-size: 24px;
+        padding: 20px 40px;
+    }
+}
