@@ -5,6 +5,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+:root {
+    --sofa: url(./assets/Sofá.jpg);
+    --buttongif: url(./assets/360.svg);
+}
+.gif {
+    --sofa: url(./assets/Sofá.gif);
+    --buttongif: url(./assets/x.svg);
+}
 body {
     background-color: #D9CDF7;
 }
@@ -16,19 +24,27 @@ body {
     place-items: center;
     height: 100vh;
 }
-.img{
-    display: grid;
-    grid-template-areas: 'A B';
-    grid-template-columns: max-content max-content;
-}
-.icon svg {
-    width: 5vw;
-    margin-inline: -7vw;
-    margin-right: 30px;
-}
-.img img{
+.img {
     grid-area: A;
+    display: flex;
+}
+.icon {
+    background-image: var(--buttongif);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 6.6vw;
+    height: 6.6vw;
+    display: flex;
+    margin-inline: -1.8em;
+    margin-right: 1.5vw;
+}
+.sofa {
+    background-image: var(--sofa);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 50vw;
+    height: 35vw;
 }
 .dir {
     grid-area: B;
@@ -41,7 +57,7 @@ body {
 }
 .nome {
     font-family: 'Crimson Pro', serif;
-    font-size: 2.4vw;
+    font-size: 2.2vw;
     margin: 1.5vw 0;
 }
 .preco {
@@ -61,22 +77,28 @@ body {
     background-color: #271A45;
     color: #D9CDF7;
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
     .tudo {
         display: block;
         height: fit-content;
     }
-    .icon svg {
-        width: 9vw;
-        margin-inline: -10vw;
-        margin-top: 7vw;
+    .img {
+        align-items: top;
+        justify-content: center;
+        margin: 60px auto 30px;
     }
-    .img img{
-        width: 90vw;
+    .sofa {
+        width: 60vw;
+        height: 45vw;
     }
-    img {
-        margin: 30px auto;
-        display: block;
+    .img {
+        display: flex;
+    }
+    .icon {
+        width: 11vw;
+        height: 11vw;
+        max-width: 70px;
+        margin-inline: -5.5vw;
     }
     .dir {
         display: grid;
@@ -105,7 +127,7 @@ body {
         font-size: 18px;
     }
     .nome {
-        font-size: 31px;
+        font-size: 28px;
         margin: 18px 0;
     }
     .preco {
