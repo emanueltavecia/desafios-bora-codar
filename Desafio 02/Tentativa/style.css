@@ -73,7 +73,7 @@ body {
     width: fit-content;
     border-radius: 100px;
 }
-.botao:hover{
+.botao:hover {
     background-color: #271A45;
     color: #D9CDF7;
 }
